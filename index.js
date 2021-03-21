@@ -5,8 +5,6 @@ const prefix = "rg/"
 
 const bdd = require("./bdd.json")
 
-const token = "ODIyOTcyMjczNjcyODQ3Mzcw.YFaCqA.Q2eK5MGUSv0CWovMV3a1ISIiftw"
-
 bot.on("message", message => {
   if(message.content.startsWith(bot.prefix + "userinfo")){
     if(message.mentions.users.first()){
@@ -238,4 +236,4 @@ function Savebdd() {
 }
 
 
-bot.login(token)
+bot.login(process.env.TOKEN)
